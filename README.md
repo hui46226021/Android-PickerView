@@ -1,5 +1,4 @@
-抱歉各位，本人已离开编程界，不能继续给大家填坑了。
-
+在 saiwu-bigkoo 大神以上修改 便于自己使用
 PickerView (2.x系列)
 ==========
 
@@ -8,10 +7,18 @@ PickerView (2.x系列)
 ——OptionsPickerView  选项选择器，支持一，二，三级选项选择，并且可以设置是否联动    
 
 2.x是全新的3D效果，比1.x版本更加贴近iOS的效果，从外观细节上也得到了改善。api兼容1.x版本，只需要把依赖的版本号升级即可，几乎不用修改代码即可完成升级。
+####使用maven 依赖
+<dependency>
+  <groupId>com.sh.zsh.code</groupId>
+  <artifactId>pickerview</artifactId>
+  <version>2.1.2</version>
+  <type>pom</type>
+</dependency>
+
 
 ####使用gradle 依赖:
 ```java
-   compile 'com.bigkoo:pickerview:2.1.1'
+    compile 'com.sh.zsh.code:pickerview:2.1.2'
   //这个是支持农历的分支 compile 'com.bigkoo:pickerview:lunar.1.0'
 ```
 
@@ -22,6 +29,8 @@ PickerView (2.x系列)
 
 
 >## 更新说明
+>v2.1.2
+ - 增加设置选中item方法。<br />
 
 >v2.1.1
  - 修复dismiss时候点击背景会重复dismiss动画问题。<br />
