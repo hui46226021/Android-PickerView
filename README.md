@@ -8,13 +8,14 @@ PickerView (2.x系列)
 
 2.x是全新的3D效果，比1.x版本更加贴近iOS的效果，从外观细节上也得到了改善。api兼容1.x版本，只需要把依赖的版本号升级即可，几乎不用修改代码即可完成升级。
 ####使用maven 依赖
-<dependency>
-  <groupId>com.sh.zsh.code</groupId>
-  <artifactId>pickerview</artifactId>
-  <version>2.1.2</version>
-  <type>pom</type>
-</dependency>
-
+```xml
+    <dependency>
+      <groupId>com.sh.zsh.code</groupId>
+      <artifactId>pickerview</artifactId>
+      <version>2.1.2</version>
+      <type>pom</type>
+    </dependency>
+```
 
 ####使用gradle 依赖:
 ```java
