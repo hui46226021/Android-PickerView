@@ -1,4 +1,4 @@
-package com.bigkoo.pickerviewdemo.bean;
+package com.sh.zsh.code.bean;
 
 import com.bigkoo.pickerview.model.IPickerViewData;
 

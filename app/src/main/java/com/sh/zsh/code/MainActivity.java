@@ -1,4 +1,4 @@
-package com.bigkoo.pickerviewdemo;
+package com.sh.zsh.code;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -14,8 +14,9 @@ import android.widget.TextView;
 import com.bigkoo.pickerview.OptionsPickerView;
 import com.bigkoo.pickerview.TimePickerView;
 import com.bigkoo.pickerview.model.IPickerViewData;
-import com.bigkoo.pickerviewdemo.bean.PickerViewData;
-import com.bigkoo.pickerviewdemo.bean.ProvinceBean;
+import com.bigkoo.pickerviewdemo.R;
+import com.sh.zsh.code.bean.PickerViewData;
+import com.sh.zsh.code.bean.ProvinceBean;
 
 
 public class MainActivity extends Activity {
@@ -155,7 +156,7 @@ public class MainActivity extends Activity {
         pvOptions.setCyclic(false, true, true);
         //设置默认选中的三级项目
         //监听确定选择按钮
-        pvOptions.setSelectOptions(1, 1, 1);
+//        pvOptions.setSelectOptions(1, 1, 1);
         pvOptions.setOnoptionsSelectListener(new OptionsPickerView.OnOptionsSelectListener() {
 
             @Override
@@ -168,6 +169,8 @@ public class MainActivity extends Activity {
                 vMasker.setVisibility(View.GONE);
             }
         });
+
+        pvOptions.setSelecedItem(1,1,1);
         //点击弹出选项选择器
         tvOptions.setOnClickListener(new View.OnClickListener() {
 

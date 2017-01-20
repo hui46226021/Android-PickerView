@@ -14,7 +14,12 @@ import java.util.ArrayList;
 /**
  * 条件选择器
  * Created by Sai on 15/11/22.
+ * Update by zhush on 2017/1/20  增加 setSelecedItem  设置选中项
+ *
  */
+
+
+
 public class OptionsPickerView<T> extends BasePickerView implements View.OnClickListener {
     WheelOptions<T> wheelOptions;
     private View btnSubmit, btnCancel;
@@ -132,6 +137,29 @@ public class OptionsPickerView<T> extends BasePickerView implements View.OnClick
             }
             dismiss();
             return;
+        }
+    }
+    /**
+     * 设置选中的item (会触发 选中回调optionsSelectListener)
+     */
+    public void setSelecedItem(int option1){
+        setSelecedItem(option1,0);
+    }
+    /**
+     * 设置选中的item (会触发 选中回调optionsSelectListener)
+     */
+    public void setSelecedItem(int option1,int option2){
+        setSelecedItem(option1,option2,0);
+    }
+    /**
+     * 设置选中的item (会触发 选中回调optionsSelectListener)
+     */
+    public void setSelecedItem(int option1,int option2,int option3){
+        setSelectOptions(option1,option2,option3);
+        if(optionsSelectListener!=null)
+        {
+            int[] optionsCurrentItems=wheelOptions.getCurrentItems();
+            optionsSelectListener.onOptionsSelect(optionsCurrentItems[0], optionsCurrentItems[1], optionsCurrentItems[2]);
         }
     }
 
